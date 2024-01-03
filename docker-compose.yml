@@ -22,3 +22,6 @@ services:
             dockerfile: php-cli.docker
         volumes:
             - ./manager:/app
+            - composer:/root/.composer/cache
+volumes:
+    composer:

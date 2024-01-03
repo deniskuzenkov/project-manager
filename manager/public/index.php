@@ -1,13 +1,9 @@
 <?php
 
-declare(strict_types=1);
+use App\Kernel;
 
-echo '<html lang="en">
-<head>
-  <title>App</title>
-  <meta charset="UTF-8" />
-</head>
-<body>
-  <h1>Hello, World!</h1>
-</body>
-</html>';
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+
+return function (array $context) {
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+};
