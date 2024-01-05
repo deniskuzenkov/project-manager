@@ -111,6 +111,9 @@ class User
 
     public function requestPasswordReset(ResetToken $token, DateTimeImmutable $date): void
     {
+        if (!$this->isActive()) {
+            throw new \DomainException('User is not active.');
+        }
         if (!$this->email) {
             throw new \DomainException('Email is not specified.');
         }
@@ -140,5 +143,15 @@ class User
         $this->networks->add(new Network($this, $network, $identity));
     }
 
+    public function passwordReset(DateTimeImmutable $date, string $hash): void
+    {
+        if (!$this->resetToken) {
+            throw new \DomainException('Resetting is not requested.');
+        }
+        if ($this->resetToken->isExpiredTo($date)) {
+            throw new \DomainException('Reset token is expired.');
+        }
 
+        $this->passwordHash = $hash;
+    }
 }

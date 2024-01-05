@@ -16,7 +16,8 @@ doctrine:
         mappings:
             User:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
+                type: annotation
+                dir: '%kernel.project_dir%/src/Model/User/Entity'
                 prefix: 'App\Model\User\Entity'
                 alias: User
 
