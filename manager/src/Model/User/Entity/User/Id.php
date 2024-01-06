@@ -22,7 +22,11 @@ class Id
 
     public function getValue(): string
     {
-       return $this->value;
+        return $this->value;
     }
 
+    public function __toString(): string
+    {
+        return $this->getValue();
+    }
 }
