@@ -34,7 +34,7 @@ class Handler
     {
         $user = $this->users->getByEmail(new Email($command->email));
         $user->requestPasswordReset(
-            $this->tokenizer->generatre(),
+            $this->tokenizer->generate(),
             new \DateTimeImmutable()
         );
 

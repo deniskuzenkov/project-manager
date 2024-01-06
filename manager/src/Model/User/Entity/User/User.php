@@ -17,41 +17,40 @@ class User
     private ?string $confirmToken;
     private ?ResetToken $resetToken = null;
     private string $status;
+    private array|ArrayCollection $networks;
+    private Role $role;
 
-    /** @var Network[] | ArrayCollection */
-    private $networks;
-
-    public function __construct(Id $id, DateTimeImmutable $date)
+    private function __construct(Id $id, DateTimeImmutable $date)
     {
         $this->id = $id;
         $this->date = $date;
         $this->status = self::STATUS_NEW;
         $this->networks = new ArrayCollection();
+        $this->role = Role::user();
     }
 
-    public function signUpByEmail(
-        Email  $email,
-        string $passwordHash,
-        string $token
-    ): void
+    public static function signUpByEmail(
+        Id                 $id,
+        \DateTimeImmutable $date,
+        Email              $email,
+        string             $passwordHash,
+        string             $token
+    ): self
     {
-        if (!$this->isNew()) {
-            throw new \DomainException('User already signed up.');
-        }
-        $this->email = $email;
-        $this->passwordHash = $passwordHash;
-        $this->confirmToken = $token;
-        $this->status = self::STATUS_WAIT;
+        $user = new self($id, $date);
+        $user->email = $email;
+        $user->passwordHash = $passwordHash;
+        $user->confirmToken = $token;
+        $user->status = self::STATUS_WAIT;
+        return $user;
     }
 
-    public function signUpByNetwork(string $network, string $identity): void
+    public static function signUpByNetwork(Id $id, \DateTimeImmutable $date ,string $network, string $identity): self
     {
-        if (!$this->isNew()) {
-            throw new \DomainException('User already signed up.');
-        }
-
-        $this->attachNetwork($network, $identity);
-        $this->status = self::STATUS_ACTIVE;
+        $user = new self($id, $date);
+        $user->attachNetwork($network, $identity);
+        $user->status = self::STATUS_ACTIVE;
+        return $user;
     }
 
     public function isWait(): bool
@@ -132,6 +131,7 @@ class User
 
         return $this->resetToken;
     }
+
     private function attachNetwork(string $network, string $identity): void
     {
         foreach ($this->networks as $existing) {
@@ -153,5 +153,19 @@ class User
         }
 
         $this->passwordHash = $hash;
+    }
+
+    public function changeRole(Role $role): void
+    {
+        if ($this->role->isEqual($role)) {
+            throw new \DomainException('Role is already the same.');
+        }
+
+        $this->role = $role;
+    }
+
+    public function getRole(): Role
+    {
+        return $this->role;
     }
 }
