@@ -28,8 +28,8 @@ class Handler
 
     public function handle(Command $command): void
     {
-        if (!$user = $this->users->findByConfirmToken($command->token)) {
-            throw  new \DomainException('Incorrect or confirmed token.');
+        if (!$user = $this->users->findByResetToken($command->token)) {
+            throw  new \DomainException('Incorrect or reset token.');
         }
 
         $user->passwordReset(

@@ -2,12 +2,8 @@
 
 namespace App\Tests\Unit\Model\User\Entity\User\SignUp;
 
-use App\Model\User\Entity\User\Email;
-use App\Model\User\Entity\User\Id;
-use App\Model\User\Entity\User\User;
 use App\Tests\Builder\User\UserBuilder;
 use PHPUnit\Framework\TestCase;
-use Ramsey\Uuid\Uuid;
 
 class ConfirmTest extends TestCase
 {

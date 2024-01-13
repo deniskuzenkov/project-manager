@@ -10,7 +10,7 @@ class RoleType extends StringType
 {
     public const NAME = 'user_user_role';
 
-    public function convertToDatabaseValue($value, AbstractPlatform $platform)
+    public function convertToDatabaseValue($value, AbstractPlatform $platform): mixed
     {
         return $value instanceof Role ? $value->getName() : $value;
     }

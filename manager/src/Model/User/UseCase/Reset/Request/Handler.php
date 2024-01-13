@@ -39,6 +39,6 @@ class Handler
         );
 
         $this->flusher->flush();
-        $this->sender->send($user->getEmail(), $user->getResetToken());
+        $this->sender->send($user->getEmail(), $user->getResetToken()->getToken());
     }
 }

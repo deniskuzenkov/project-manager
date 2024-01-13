@@ -6,7 +6,6 @@ use App\Model\User\Entity\User\Email;
 use App\Model\User\Entity\User\Id;
 use App\Model\User\Entity\User\User;
 use PHPUnit\Framework\TestCase;
-use Ramsey\Uuid\Uuid;
 
 class RequestTest extends TestCase
 {

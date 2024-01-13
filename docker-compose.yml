@@ -36,7 +36,11 @@ services:
                 POSTGRES_USER: app
                 POSTGRES_PASSWORD: ${MANAGER_DB_PASSWORD}
                 POSTGRES_DB: app
-
+    mailer:
+        image: mailhog/mailhog
+        ports:
+            - "8025:8025"
+            - "1025:1025"
 volumes:
     manager-postgres:
     composer:

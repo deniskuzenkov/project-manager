@@ -6,7 +6,6 @@ namespace App\Model\User\Entity\User;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
@@ -17,9 +16,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User
 {
-    private const STATUS_NEW = 'new';
-    private const STATUS_WAIT = 'wait';
-    private const STATUS_ACTIVE = 'active';
+    public const STATUS_NEW = 'new';
+    public const STATUS_WAIT = 'wait';
+    public const STATUS_ACTIVE = 'active';
 
     /**
      * @ORM\Column(type="user_user_id")
