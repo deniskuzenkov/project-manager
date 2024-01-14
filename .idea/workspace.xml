@@ -5,54 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92a3902-8303-45fc-82f3-18c0dd73e029" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/manager/src/Container/Model/User/Service/ResetTokenizerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Auth/ResetController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Auth/SignUpController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Request/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Reset/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Request/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/AuthView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/UserFetcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Security/UserIdentity.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Security/UserProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/_flashes.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/auth/reset/request.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/auth/reset/reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/auth/signup.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/mail.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/mail/user/reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/mail/user/signup.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/docker/development/php/default.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/tests/Functional/HomeTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/.env" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/assets/controllers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/packages/messenger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/messenger.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/Flusher.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/Flusher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Network.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Network.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/ResetToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/ResetToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/EmailType.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/EmailType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/IdType.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/IdType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/RoleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Type/RoleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/docker/development/php-cli.docker" beforeDir="false" afterPath="$PROJECT_DIR$/manager/docker/development/php-cli.docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/docker/development/php-fpm.docker" beforeDir="false" afterPath="$PROJECT_DIR$/manager/docker/development/php-fpm.docker" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Service/ConfirmTokenSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Service/ConfirmTokenSender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Service/ResetTokenSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Service/ResetTokenSender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Request/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Request/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Request/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Request/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Reset/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Reset/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Reset/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Reset/Reset/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Request/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Request/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Network/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Network/AuthTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/RequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/RequestTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/ResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/ResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/SignUp/ConfirmTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/SignUp/ConfirmTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/SignUp/RequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/SignUp/RequestTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +40,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/manager/assets/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/manager/assets/styles/app.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/manager/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/manager/src/DataFixtures/UserFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
@@ -218,6 +192,9 @@
       <path value="$PROJECT_DIR$/manager/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/manager/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/manager/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/manager/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -299,7 +276,7 @@
       <workItem from="1704195174190" duration="107229000" />
       <workItem from="1704564606313" duration="38337000" />
       <workItem from="1704776448402" duration="22000" />
-      <workItem from="1705140043297" duration="2537000" />
+      <workItem from="1705140043297" duration="17851000" />
     </task>
     <servers />
   </component>

@@ -145,6 +145,9 @@
       <path value="$PROJECT_DIR$/manager/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/manager/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/manager/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/manager/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

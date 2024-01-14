@@ -25,6 +25,17 @@ services:
             - composer:/root/.composer/cache
         depends_on:
             - manager-postgres
+    manager-node-watch:
+        image: node:20
+        volumes:
+            - ./manager:/app
+        working_dir: /app
+        command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && npm run watch"
+    manager-node:
+            image: node:20
+            volumes:
+                - ./manager:/app
+            working_dir: /app
     manager-postgres:
             image: postgres:11.2-alpine
             restart: always

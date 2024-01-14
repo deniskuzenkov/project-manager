@@ -1,5 +1,5 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up manage-init
+init: docker-down-clear manager-clear docker-pull docker-build docker-up manager-init
 test: manager-test
 console: manage-console
 bash: manager-bash
@@ -9,18 +9,27 @@ docker-up:
 
 docker-down:
 	docker-compose down --remove-orphans
-
+docker-down-clear:
+	docker-compose down -v --remove-orphans
 docker-pull:
 	docker-compose pull
-
+manager-clear:
+	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine rm -f .ready
 docker-build:
 	docker-compose build
 
-manage-init: manager-composer-install manager-wait-db manager-migrations
+manager-init: manager-composer-install manager-assets-install manager-wait-db manager-migrations manager-fixtures manager-ready
 
 manager-wait-db:
 	until docker-compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done
-
+manager-assets-install:
+	docker-compose run --rm manager-node yarn install
+manager-fixtures:
+	docker-compose run --rm manager-php-cli php bin/console doctrine:fixtures:load --no-interaction
+manager-assets-dev:
+	docker-compose run --rm manager-node npm run dev
+manager-ready:
+	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine touch .ready
 manager-migrations:
 	docker-compose run --rm manager-php-cli php bin/console doctrine:migrations:migrate --no-interaction
 
@@ -31,7 +40,7 @@ manager-test:
 manager-bash:
 	docker-compose run --rm manager-php-cli bash
 manager-composer-install:
-	docker-compose run --rm manager-php-cli composer install
+	docker-compose run --rm manager-php-cli composer install --ignore-platform-reqs
 
 cli:
 	docker-compose run --rm manager-php-cli php bin/app.php

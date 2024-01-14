@@ -18,7 +18,7 @@ class ResetTest extends TestCase
         self::assertNotNull($user->getResetToken());
 
         $user->passwordReset($now, $hash = 'hash');
-        self::assertNotNull($user->getResetToken());
+        self::assertNull($user->getResetToken());
         self::assertEquals($hash, $user->getPasswordHash());
 
     }

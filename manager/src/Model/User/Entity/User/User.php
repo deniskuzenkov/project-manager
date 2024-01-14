@@ -141,7 +141,7 @@ class User
     public function changeRole(Role $role): void
     {
         if ($this->role->isEqual($role)) {
-            throw new \DomainException('Role is already same.');
+            throw new \DomainException('Role is already the same.');
         }
         $this->role = $role;
     }

@@ -1,6 +1,6 @@
 FROM php:8.2-cli
 
-RUN apt-get update && apt-get install -y zlib1g-dev zip \
+RUN apt-get clean all && apt-get update && apt-get install -y zlib1g-dev zip \
     && apt-get install -y libzip-dev \
     && apt-get install -y libpq-dev \
     && docker-php-ext-install zip \
