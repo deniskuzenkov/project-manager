@@ -28,5 +28,17 @@ services:
     App\Model\User\Service\ResetTokenizer:
         factory: ['@App\Container\Model\User\Service\ResetTokenizerFactory', 'create']
         arguments: ['PT1H']
-    # add more service definitions when explicit configuration is needed
+
+    Predis\Client:
+        arguments:
+            - '%env(REDIS_URL)%'
+
+    Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler:
+        arguments:
+            - '@Predis\Client'
+
+    App\Widget\:
+        resource: '../src/Widget'
+        tags: ['twig.extension']
+            # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

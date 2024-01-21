@@ -16,6 +16,10 @@ services:
             dockerfile: php-fpm.docker
         volumes:
             - ./manager:/app
+        depends_on:
+            - manager-postgres
+            - mailer
+            - manager-redis
     manager-php-cli:
         build:
             context: ./manager/docker/development
@@ -25,6 +29,8 @@ services:
             - composer:/root/.composer/cache
         depends_on:
             - manager-postgres
+            - mailer
+            - manager-redis
     manager-node-watch:
         image: node:20
         volumes:
@@ -47,6 +53,11 @@ services:
                 POSTGRES_USER: app
                 POSTGRES_PASSWORD: ${MANAGER_DB_PASSWORD}
                 POSTGRES_DB: app
+    manager-redis:
+        image: redis:3.0-alpine
+        volumes:
+            - manager-redis:/data
+        command: redis-server --requirepass secret
     mailer:
         image: mailhog/mailhog
         ports:
@@ -54,4 +65,5 @@ services:
             - "1025:1025"
 volumes:
     manager-postgres:
+    manager-redis:
     composer:

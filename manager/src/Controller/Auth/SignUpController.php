@@ -2,7 +2,7 @@
 
 namespace App\Controller\Auth;
 
-use App\Model\User\UseCase\SignUp\Confirm\Command as ConfirmCommand;
+use App\Model\User\UseCase\SignUp\Confirm\ByToken\Command as ConfirmCommand;
 use App\Model\User\UseCase\SignUp\Request\Command as RequestCommand;
 use App\Model\User\UseCase\SignUp\Request\Form;
 use App\Model\User\UseCase\SignUp\Request\Handler;
@@ -47,7 +47,7 @@ class SignUpController extends AbstractController
 
 
     #[Route('/signup/{token}', name: "auth.signup.confirm")]
-    public function confirm(string $token, \App\Model\User\UseCase\SignUp\Confirm\Handler $handler): Response
+    public function confirm(string $token, \App\Model\User\UseCase\SignUp\Confirm\ByToken\Handler $handler): Response
     {
         $command = new ConfirmCommand($token);
 

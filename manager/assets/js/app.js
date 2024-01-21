@@ -6,7 +6,13 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import '../css/app.scss';
 
 // start the Stimulus application
-import './bootstrap';
+import 'bootstrap';
+import  './chart.min';
+import './coreui.utils';
+import './coreui.bundle';
+import './simplebar.min';
+import './main';
+//import '@coreui/coreui';

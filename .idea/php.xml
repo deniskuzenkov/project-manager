@@ -148,6 +148,7 @@
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/manager/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

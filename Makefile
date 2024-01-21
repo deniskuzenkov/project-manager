@@ -1,8 +1,10 @@
 up: docker-up
 init: docker-down-clear manager-clear docker-pull docker-build docker-up manager-init
 test: manager-test
+restart: docker-down docker-up
 console: manage-console
 bash: manager-bash
+mail: manager-mail
 
 docker-up:
 	docker-compose up -d
@@ -17,13 +19,15 @@ manager-clear:
 	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine rm -f .ready
 docker-build:
 	docker-compose build
-
+manager-mail:
+	docker-compose run --rm manager-php-cli php bin/console messenger:consume async -vv
 manager-init: manager-composer-install manager-assets-install manager-wait-db manager-migrations manager-fixtures manager-ready
 
 manager-wait-db:
 	until docker-compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done
 manager-assets-install:
 	docker-compose run --rm manager-node yarn install
+	docker-compose run --rm manager-node npm rebuild node-sass
 manager-fixtures:
 	docker-compose run --rm manager-php-cli php bin/console doctrine:fixtures:load --no-interaction
 manager-assets-dev:

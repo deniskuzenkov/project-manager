@@ -5,25 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92a3902-8303-45fc-82f3-18c0dd73e029" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/manager/docker/development/php/default.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/tests/Functional/HomeTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/css/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/css/simplebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/js/chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/js/coreui.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/js/coreui.utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/assets/js/simplebar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Command/User/ConfirmCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Command/User/RoleCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Controller/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Manual/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Manual/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/DetailView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/NetworkView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/ShortView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Widget/User/RoleWidget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Widget/User/StatusWidget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/auth/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/profile/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/auth.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/widget/user/status.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/.env" beforeDir="false" afterPath="$PROJECT_DIR$/manager/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/manager/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/assets/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/manager/assets/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/assets/styles/app.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/docker/development/php-cli.docker" beforeDir="false" afterPath="$PROJECT_DIR$/manager/docker/development/php-cli.docker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/docker/development/php-fpm.docker" beforeDir="false" afterPath="$PROJECT_DIR$/manager/docker/development/php-fpm.docker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Controller/Auth/SignUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/Auth/SignUpController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Role/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Role/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Role/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Role/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/ByToken/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/ByToken/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/ReadModel/User/UserFetcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/UserFetcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/auth/reset/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/auth/reset/request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/auth/reset/reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/auth/reset/reset.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/auth/signup.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/auth/signup.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/ResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/tests/Unit/Model/User/Entity/User/Reset/ResetTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/manager/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +69,13 @@
       <executable path="composer" />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -44,6 +84,7 @@
     <setting file="file://$PROJECT_DIR$/manager/assets/styles/app.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/manager/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/manager/src/DataFixtures/UserFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/manager/webpack.config.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
@@ -195,6 +236,7 @@
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/manager/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/manager/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -209,9 +251,10 @@
   "keyToString": {
     "HTTP Request.All in rest-api.executor": "Run",
     "HTTP Request.All in rest-api_1.executor": "Run",
+    "Makefile Target.manager-assets-install.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/cosma/projects/php/symfony/project-manager",
+    "last_opened_file_path": "/home/cosma/projects/php/symfony/project-manager/manager/src/Model/User/UseCase/SignUp/Confirm/Manual",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -229,22 +272,31 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/manager/src/Model/User/UseCase/SignUp/Confirm/Manual" />
+      <recent name="$PROJECT_DIR$/manager/templates/app/auth" />
+      <recent name="$PROJECT_DIR$/manager/templates" />
       <recent name="$PROJECT_DIR$/manager/templates/app/auth/reset" />
       <recent name="$PROJECT_DIR$/manager/templates/app/mail/user" />
-      <recent name="$PROJECT_DIR$/manager/src/Container/Model/User" />
-      <recent name="$PROJECT_DIR$/manager/templates/app/auth" />
-      <recent name="$PROJECT_DIR$/manager/src/Model/User/UseCase/Role" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/manager/src/Command/User" />
+      <recent name="$PROJECT_DIR$/manager/assets/js" />
+      <recent name="$PROJECT_DIR$/manager/assets/css" />
       <recent name="$PROJECT_DIR$/manager/templates" />
       <recent name="$PROJECT_DIR$/manager/templates/app" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.All in rest-api_1">
+  <component name="RunManager" selected="Makefile Target.manager-assets-install">
     <configuration name="All in rest-api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
       <method v="2" />
     </configuration>
     <configuration name="All in rest-api_1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="manager-assets-install" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="manager-assets-install" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -253,6 +305,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.manager-assets-install" />
         <item itemvalue="HTTP Request.All in rest-api" />
         <item itemvalue="HTTP Request.All in rest-api_1" />
       </list>
@@ -276,7 +329,8 @@
       <workItem from="1704195174190" duration="107229000" />
       <workItem from="1704564606313" duration="38337000" />
       <workItem from="1704776448402" duration="22000" />
-      <workItem from="1705140043297" duration="17851000" />
+      <workItem from="1705140043297" duration="18787000" />
+      <workItem from="1705751395493" duration="32979000" />
     </task>
     <servers />
   </component>
