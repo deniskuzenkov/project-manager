@@ -59,6 +59,19 @@ class UserFetcher
         return $result ? new ShortView($result) : null;
     }
 
+    public function findBySignUpConfirmToken(string $token): ?ShortView
+    {
+        $stmt = $this->connection->executeQuery("
+            select u.id as id,
+            u.email as email,
+            u.role as role,
+            u.status as status
+            from user_users u
+            where u.confirm_token = :token", ['token' => $token]);
+        $result = $stmt->fetchAssociative();
+        return $result ? new ShortView($result) : null;
+    }
+
     public function findDetail(string $id): ?DetailView
     {
         $stmt = $this->connection->executeQuery("
@@ -67,7 +80,9 @@ class UserFetcher
             u.email as email,
             u.date as date,
             u.role as role,
-            u.status as status
+            u.status as status,
+            name_first as first_name,
+            name_last as last_name
             from user_users u
             where u.id = :id", ['id' => $id]);
         $result = $stmt->fetchAssociative();
@@ -84,6 +99,14 @@ class UserFetcher
         $result = $stmt->fetchAllAssociative();
         $detailView->setNetworks($result);
         return $detailView;
+    }
+
+    public function getDetail(string $id): DetailView
+    {
+        if (!$detail = $this->findDetail($id)) {
+            throw new \LogicException('User is not found');
+        }
+        return $detail;
     }
 
 }

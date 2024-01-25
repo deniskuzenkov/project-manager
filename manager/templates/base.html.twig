@@ -194,6 +194,7 @@
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
 <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+
     <header class="header header-sticky mb-4">
         <div class="container-fluid">
             <button class="header-toggler px-md-0 me-md-3" type="button"
@@ -242,16 +243,22 @@
                 </li>
             </ul>
         </div>
-        <div class="header-divider"></div>
+        <div class="header-divider">
+
+        </div>
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+                {% block breadcrumbs %}{% endblock %}
+            </nav>
+        </div>
     </header>
+
     <div class="body flex-grow-1 px-3">
         <div class="container-xl">
             <main class="main">
-                {% block breadcrumbs %}{% endblock %}
-                <div class="container-fluid">
+
                     {% include '_flashes.html.twig' %}
                     {% block body %}{% endblock %}
-                </div>
             </main>
             </div>
         </div>

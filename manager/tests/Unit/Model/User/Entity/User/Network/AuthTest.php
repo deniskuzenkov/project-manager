@@ -3,6 +3,7 @@
 namespace App\Tests\Unit\Model\User\Entity\User\Network;
 
 use App\Model\User\Entity\User\Id;
+use App\Model\User\Entity\User\Name;
 use App\Model\User\Entity\User\Network;
 use App\Model\User\Entity\User\User;
 use PHPUnit\Framework\TestCase;
@@ -13,6 +14,7 @@ class AuthTest extends TestCase
     {
         $user = User::signUpByNetwork(
             Id::next(),
+            $name = new Name('First', 'Last'),
             new \DateTimeImmutable(),
             $network = 'vk',
             $identity = '1234566'
@@ -23,6 +25,7 @@ class AuthTest extends TestCase
         self::assertCount(1, $networks = $user->getNetworks());
         self::assertInstanceOf(Network::class, $first = $networks[0]);
         self::assertEquals($network, $first->getNetwork());
+        self::assertEquals($name, $user->getName());
         self::assertEquals($identity, $first->getIdentity());
         self::assertTrue($user->getRole()->isUser());
 

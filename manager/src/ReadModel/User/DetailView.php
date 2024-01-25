@@ -9,6 +9,8 @@ class DetailView
     public string $email;
     public string $role;
     public string $status;
+    public string $firstName;
+    public string $lastName;
 
     /** @var NetworkVIew[] */
     public array $networks = [];
@@ -20,6 +22,8 @@ class DetailView
         $this->email = $result['email'];
         $this->role = $result['role'];
         $this->status = $result['status'];
+        $this->firstName = $result['first_name'];
+        $this->lastName = $result['last_name'];
     }
 
     public function setNetworks(array $results): void
