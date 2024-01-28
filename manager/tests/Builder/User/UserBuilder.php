@@ -72,8 +72,8 @@ class UserBuilder
         if ($this->network) {
             $user = User::signUpByNetwork(
                 $this->id,
-                $this->date,
                 $this->name,
+                $this->date,
                 $this->network,
                 $this->identity
             );

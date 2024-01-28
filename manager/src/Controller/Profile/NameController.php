@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Profile;
 
 use App\Model\User\UseCase\Name\Command;
 use App\Model\User\UseCase\Name\Form;

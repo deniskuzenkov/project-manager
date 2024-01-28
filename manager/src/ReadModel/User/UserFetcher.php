@@ -3,16 +3,21 @@
 namespace App\ReadModel\User;
 
 
+use App\ReadModel\User\Filter\Filter;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception;
+use Knp\Component\Pager\Pagination\PaginationInterface;
+use Knp\Component\Pager\PaginatorInterface;
 
 class UserFetcher
 {
     private Connection $connection;
+    private PaginatorInterface $paginator;
 
-    public function __construct(Connection $connection)
+    public function __construct(Connection $connection, PaginatorInterface $paginator)
     {
         $this->connection = $connection;
+        $this->paginator = $paginator;
     }
 
     /**
@@ -107,6 +112,51 @@ class UserFetcher
             throw new \LogicException('User is not found');
         }
         return $detail;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function all(Filter $filter, int $page, int $size, string $sort, string $direction): PaginationInterface
+    {
+        $db = $this->connection->createQueryBuilder()
+            ->select(
+                'id',
+                'email',
+                'date',
+                'role',
+                'status',
+                'TRIM(CONCAT(name_first , \' \',  name_last))  as name'
+            )
+            ->from('user_users');
+
+        if ($filter->name) {
+            $db->andWhere($db->expr()->like('LOWER(CONCAT(name_first, \'\', name_last))', ':name'));
+            $db->setParameter('name', '%' . mb_strtolower($filter->name) . '%');
+        }
+
+        if ($filter->email) {
+            $db->andWhere($db->expr()->like('LOWER(email)', ':email'));
+            $db->setParameter('email', '%' . mb_strtolower($filter->email) . '%');
+        }
+
+        if ($filter->status) {
+            $db->andWhere('status = :status');
+            $db->setParameter('status', $filter->status);
+        }
+
+        if ($filter->role) {
+            $db->andWhere('role = :role');
+            $db->setParameter('role', $filter->role);
+        }
+
+        if (!\in_array($sort, ['date', 'name', 'email', 'role', 'status'], true)) {
+            throw new \UnexpectedValueException('Cannot sort by ' . $sort);
+        }
+
+        $db->orderBy($sort, $direction === 'desc' ? 'desc' : 'asc');
+
+        return $this->paginator->paginate($db, $page, $size);
     }
 
 }
