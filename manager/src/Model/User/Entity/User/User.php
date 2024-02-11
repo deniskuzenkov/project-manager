@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model\User\Entity\User;
 
+use App\ReadModel\User\NetworkView;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 /**
@@ -147,6 +148,29 @@ class User
         $user->attachNetwork($network, $identity);
         $user->status = self::STATUS_ACTIVE;
         return $user;
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public static function fromUser(array $user): User
+    {
+        $self = new self(
+            new Id($user['id']),
+            new Name($user['first_name'], $user['last_name']),
+            new \DateTimeImmutable($user['date'])
+        );
+        $self->status = $user['status'];
+        $self->email = new Email($user['email']);
+        $self->role = new Role($user['role']);
+        return $self;
+    }
+
+    public function setNetworks(array $results): void
+    {
+        foreach ($results as $result) {
+            $this->networks [] = new NetworkView($result);
+        }
     }
 
     private function attachNetwork(string $network, string $identity): void

@@ -6,10 +6,13 @@ use App\Model\User\Entity\User\User;
 use App\Model\User\UseCase\Create\Command;
 use App\Model\User\UseCase\Create\Form;
 use App\Model\User\UseCase\Create\Handler;
+use App\Model\Work\Entity\Members\Member\Member;
 use App\ReadModel\User\Filter\Filter;
 use App\ReadModel\User\UserFetcher;
+use App\ReadModel\Work\Members\Member\MemberFetcher;
 use Doctrine\DBAL\Exception;
 use Psr\Log\LoggerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,6 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route("/users", name:"users")]
+#[IsGranted('ROLE_MANAGE_USERS')]
 class UsersController extends AbstractController
 {
     private const PER_PAGE = 2;
@@ -54,9 +58,11 @@ class UsersController extends AbstractController
     }
 
     #[Route('/{id}', '.show')]
-    public function show(User $user): Response
+    public function show(User $user, MemberFetcher $members): Response
     {
-        return $this->render('app/users/show.html.twig', compact('user'));
+        $member = $members->find($user->getId()->getValue());
+
+        return $this->render('app/users/show.html.twig', compact('user', 'member'));
     }
 
     #[Route('/create', '.create', priority: 2)]

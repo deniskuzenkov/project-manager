@@ -19,14 +19,14 @@
                 <tr>
                     <th>Name</th>
                     <td>
-                        {{ user.firstName }} {{ user.lastName }}
+                        {{ user.name.first }} {{ user.name.last }}
                         <a href="{{ path('profile.name') }}" class="btn btn-sm btn-outline-primary"><span class="fa fa-pencil"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <th>Email</th>
                     <td>
-                        {{ user.email }}
+                        {{ user.email.value }}
                         <a href="{{ path('profile.email') }}" class="btn btn-sm btn-outline-primary"><span class="fa fa-pencil"></span></a>
                     </td>
                 </tr>
@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <th>Role</th>
-                    <td>{{ user_role(user.role) }}</td>
+                    <td>{{ user_role(user.role.name) }}</td>
                 </tr>
                 <tr>
                     <th>Status</th>

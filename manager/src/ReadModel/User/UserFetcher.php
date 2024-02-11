@@ -3,9 +3,12 @@
 namespace App\ReadModel\User;
 
 
+use App\Model\User\Entity\User\User;
+use App\ReadModel\NotFoundException;
 use App\ReadModel\User\Filter\Filter;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
 
@@ -13,11 +16,13 @@ class UserFetcher
 {
     private Connection $connection;
     private PaginatorInterface $paginator;
+    private EntityManagerInterface $em;
 
-    public function __construct(Connection $connection, PaginatorInterface $paginator)
+    public function __construct(Connection $connection, EntityManagerInterface $em, PaginatorInterface $paginator)
     {
         $this->connection = $connection;
         $this->paginator = $paginator;
+        $this->em = $em;
     }
 
     /**
@@ -77,7 +82,7 @@ class UserFetcher
         return $result ? new ShortView($result) : null;
     }
 
-    public function findDetail(string $id): ?DetailView
+    public function findOne(string $id): ?User
     {
         $stmt = $this->connection->executeQuery("
             select 
@@ -91,9 +96,9 @@ class UserFetcher
             from user_users u
             where u.id = :id", ['id' => $id]);
         $result = $stmt->fetchAssociative();
-        $detailView = $result ? new DetailView($result) : null;
+        $user = $result ? User::fromUser($result) : null;
 
-        if (!$detailView) {
+        if (!$user) {
             return null;
         }
 
@@ -102,16 +107,16 @@ class UserFetcher
             from user_user_networks
             where user_id = :id", ['id' => $id]);
         $result = $stmt->fetchAllAssociative();
-        $detailView->setNetworks($result);
-        return $detailView;
+        $user->setNetworks($result);
+        return $user;
     }
 
-    public function getDetail(string $id): DetailView
+    public function get(string $id): User
     {
-        if (!$detail = $this->findDetail($id)) {
-            throw new \LogicException('User is not found');
+        if (!$user = $this->findOne($id)) {
+            throw new NotFoundException('User is not found');
         }
-        return $detail;
+        return $user;
     }
 
     /**

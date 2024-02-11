@@ -26,12 +26,10 @@ class NameController extends AbstractController
     #[Route('/profile/name', name:'profile.name')]
     public function request(Request $request, Handler $handler): Response
     {
-        $user = $this->users->getDetail($this->getUser()->getId());
+        $user = $this->users->get($this->getUser()->getId());
 
-        $command = new Command($user->id);
-        $command->firstName = $user->firstName;
-        $command->lastName = $user->lastName;
-
+        $command = new Command($user->getId());
+        $command = $command::fromUser($user);
         $form = $this->createForm(Form::class, $command);
         $form->handleRequest($request);
 

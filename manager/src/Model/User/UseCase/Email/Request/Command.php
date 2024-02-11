@@ -16,4 +16,9 @@ class Command
     {
         $this->id = $id;
     }
+
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
 }

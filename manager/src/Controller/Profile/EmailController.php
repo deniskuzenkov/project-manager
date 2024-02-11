@@ -24,7 +24,6 @@ class EmailController extends AbstractController
     public function request(Request $request, Email\Request\Handler $handler): Response
     {
         $command = new Email\Request\Command($this->getUser()->getId());
-
         $form = $this->createForm(Email\Request\Form::class, $command);
         $form->handleRequest($request);
 

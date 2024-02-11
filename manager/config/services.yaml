@@ -6,6 +6,7 @@
 parameters:
 
 services:
+
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
@@ -19,6 +20,20 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+            - '../src/Model/User/Entity'
+            - '../src/Model/Work/Entity'
+    App\Model\User\Entity\User\UserRepository: ~
+    App\Model\Work\Entity\Members\Group\GroupRepository: ~
+    App\Model\Work\Entity\Members\Member\MemberRepository: ~
+    App\Model\Work\Entity\Projects\Project\ProjectRepository: ~
+    App\Model\Work\Entity\UseCase\Members\Member\Create\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Member\Edit\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Member\Move\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Member\Archive\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Member\Reinstate\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Group\Create\Handler: ~
+    App\Model\Work\Entity\UseCase\Members\Group\Remove\Handler: ~
+
     App\Model\User\Service\ConfirmTokenSender:
         $from: {'%env(MAILER_FROM_MAIL)%': '%env(MAILER_FROM_MAIL)%'}
 
@@ -40,8 +55,26 @@ services:
         arguments:
             - '@Predis\Client'
 
+    App\Model\Work\Entity\UseCase\Members\Member\Create\Form:
+        arguments:
+            - '@App\ReadModel\Work\Members\GroupFetcher'
+
+    App\Model\Work\Entity\UseCase\Members\Member\Move\Form:
+        arguments:
+            - '@App\ReadModel\Work\Members\GroupFetcher'
+
     App\Widget\:
         resource: '../src/Widget'
         tags: ['twig.extension']
             # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    Symfony\Component\HttpFoundation\Session\Session:
+        alias: Symfony\Component\HttpFoundation\Session\SessionInterface
+
+    App\Menu\SidebarMenu:
+        tags:
+            - { name: knp_menu.menu_builder, method: build, alias: sidebar }
+
+    App\Menu\Work\ProjectMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: work_project }]

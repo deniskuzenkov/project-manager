@@ -152,6 +152,8 @@
       <path value="$PROJECT_DIR$/manager/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/manager/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/manager/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/manager/vendor/knplabs/knp-menu" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

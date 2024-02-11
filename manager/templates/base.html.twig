@@ -19,43 +19,8 @@
             <use xlink:href="assets/brand/coreui.svg#signet"></use>
         </svg>
     </div>
-    <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ path('home') }}">
-                <i class="nav-icon icon-home"></i> Profile
-            </a>
-        </li>
-        <li class="nav-title">Theme</li>
-        {% if is_granted('ROLE_MANAGE_USERS') %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('users') }}">
-                    <i class="nav-icon icon-people"></i> Users
-                </a>
-            </li>
-        {% endif %}
-        <li class="nav-item">
-            <a class="nav-link" href="{{ path('profile') }}">
-                <i class="nav-icon icon-user"></i> Profile
-            </a>
-        </li>
-        <li class="nav-group">
-            <a class="nav-link nav-group-toggle" href="#">
-                <span class="nav-icon">
-                    <span class="cil-cursor"></span>
-                </span>
-                Buttons
-            </a>
-            <ul class="nav-group-items">
-                <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
-                        Buttons</a></li>
-                <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
-                        Buttons Group</a></li>
-                <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span>
-                        Dropdowns</a></li>
-            </ul>
-        </li>
+    {{ knp_menu_render('sidebar', {'currentClass': 'active'}) }}
 
-    </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
 <div class="wrapper d-flex flex-column min-vh-100 bg-light">
