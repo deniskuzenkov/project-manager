@@ -5,131 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92a3902-8303-45fc-82f3-18c0dd73e029" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/manager/config/packages/knp_menu.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240130170848.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240130171518.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240203094354.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240203094725.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240203094741.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240203095241.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240204124750.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240204153944.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Annotation/Guid.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Members/GroupController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Members/MembersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/Project/ProjectController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/Project/Settings/SettingsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/ProjectsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/DataFixtures/User/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Members/GroupFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Members/MemberFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Projects/ProjectFixture.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Menu/SidebarMenu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Menu/Work/ProjectMenu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Group/Group.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Group/GroupRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Group/Id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Group/Type/IdType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Email.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Member.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/MemberRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Name.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Type/EmailType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Type/IdType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Type/StatusType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Project.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/ProjectRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Type/IdType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Type/StatusType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Create/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Create/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Create/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Edit/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Edit/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Edit/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Remove/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Group/Remove/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Archive/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Archive/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Create/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Create/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Create/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Edit/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Edit/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Edit/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Move/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Move/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Move/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Reinstate/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Members/Member/Reinstate/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Archive/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Archive/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Create/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Create/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Create/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Edit/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Edit/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Edit/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Reinstate/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Reinstate/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Remove/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Remove/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/NotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/GroupFetcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/Member/Filter/Filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/Member/Filter/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/Member/MemberFetcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Projects/Project/Filter/Filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Projects/Project/Filter/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Projects/Project/ProjectFetcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Widget/Work/Members/Member/StatusWidget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/Widget/Work/Projects/Project/StatusWidget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/_tabs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/group/_tabs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/group/create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/group/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/group/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/move.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/members/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/_tabs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/override/menu.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/widget/work/members/member/status.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/templates/widget/work/projects/project/status.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240211113537.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240215162017.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/migrations/Version20240217142243.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/Project/Settings/DepartmentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/RolesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Projects/RoleFixture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Menu/Work/ProjectSettingsMenu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Menu/Work/ProjectsMenu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Department/Type/IdType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Membership.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/Id.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/RoleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/Type/IdType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Role/Type/PermissionsType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Create/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Create/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Create/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Edit/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Edit/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Edit/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Remove/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Department/Remove/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Add/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Add/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Add/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Copy/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Copy/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Copy/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Create/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Create/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Create/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Edit/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Edit/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Edit/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Remove/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/Model/Work/UseCase/Projects/Role/Remove/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Projects/Project/DepartmentFetcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Projects/RoleFetcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/_tabs.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/_tabs.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/departments/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/departments/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/departments/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/roles/copy.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/roles/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/roles/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/roles/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/roles/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager/translations/work_permissions.en.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Controller/Profile/EmailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/Profile/EmailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Controller/Profile/NameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/Profile/NameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Controller/Profile/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/Profile/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/DataFixtures/UserFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/Entity/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Email/Request/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Email/Request/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Name/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/User/UseCase/Name/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/ReadModel/User/DetailView.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/ReadModel/User/UserFetcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/ReadModel/User/UserFetcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/manager/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/templates/app/profile/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/profile/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/templates/app/users/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/users/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/Project/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Controller/Work/Projects/Project/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Members/MemberFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Members/MemberFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Projects/ProjectFixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/DataFixtures/Work/Projects/ProjectFixture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Id.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Member/Id.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Id.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Id.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Department/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Department/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/Model/Work/Entity/Projects/Project/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/Member/MemberFetcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/ReadModel/Work/Members/Member/MemberFetcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/work/projects/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/work/projects/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +264,7 @@
     </include_path>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -356,11 +303,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/manager/templates/app/work/projects/project/settings" />
       <recent name="$PROJECT_DIR$/manager/src/Model/Work/Entity/UseCase/Members/Group/Remove" />
       <recent name="$PROJECT_DIR$/manager/src/Model/Work/Entity/UseCase/Members/Group/Edit" />
       <recent name="$PROJECT_DIR$/manager/src/Model/Work/Entity/Members/Group" />
       <recent name="$PROJECT_DIR$/manager/src/Model/User/UseCase" />
-      <recent name="$PROJECT_DIR$/manager/src/Model/User/UseCase/Create" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/manager/templates/widget/work/projects/project" />
@@ -398,7 +345,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
       </set>
     </attachedChunks>
   </component>
@@ -442,7 +389,14 @@
       <workItem from="1707192364445" duration="137000" />
       <workItem from="1707409305701" duration="3395000" />
       <workItem from="1707452902024" duration="17000" />
-      <workItem from="1707559594459" duration="3526000" />
+      <workItem from="1707559594459" duration="17026000" />
+      <workItem from="1707755496114" duration="3889000" />
+      <workItem from="1707797807455" duration="207000" />
+      <workItem from="1707839806802" duration="5320000" />
+      <workItem from="1707886339401" duration="86000" />
+      <workItem from="1708012804513" duration="5130000" />
+      <workItem from="1708056988840" duration="33000" />
+      <workItem from="1708172016914" duration="5040000" />
     </task>
     <servers />
   </component>

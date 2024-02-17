@@ -5,7 +5,7 @@ namespace App\Model\Work\Entity\Projects;
 use Ramsey\Uuid\Uuid;
 use Webmozart\Assert\Assert;
 
-class Id
+class Id extends \App\Model\Work\Entity\Projects\Project\Department\Id
 {
     private string $value;
 

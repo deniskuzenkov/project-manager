@@ -17,6 +17,10 @@ doctrine:
             work_members_member_status: 'App\Model\Work\Entity\Members\Member\Type\StatusType'
             work_projects_project_id: 'App\Model\Work\Entity\Projects\Project\Type\IdType'
             work_projects_project_status: 'App\Model\Work\Entity\Projects\Project\Type\StatusType'
+            work_projects_project_department_id: 'App\Model\Work\Entity\Projects\Project\Department\Type\IdType'
+            work_projects_role_id: 'App\Model\Work\Entity\Projects\Role\Type\IdType'
+            work_projects_role_permissions: 'App\Model\Work\Entity\Projects\Role\Type\PermissionsType'
+
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '15'

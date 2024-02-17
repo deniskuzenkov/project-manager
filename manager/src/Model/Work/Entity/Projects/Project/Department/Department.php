@@ -34,7 +34,7 @@ class Department
     {
         $this->project = $project;
         $this->id = $id;
-        $this->name =$id;
+        $this->name =$name;
     }
 
     public function isNameEqual(string $name): bool
@@ -56,5 +56,10 @@ class Department
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function edit(string $name): void
+    {
+        $this->name = $name;
     }
 }

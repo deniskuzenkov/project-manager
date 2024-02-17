@@ -4,6 +4,7 @@ namespace App\ReadModel\Work\Members\Member;
 
 use App\Model\Work\Entity\Members\Member\Member;
 use App\Model\Work\Entity\Members\Member\MemberRepository;
+use App\Model\Work\Entity\Members\Member\Status;
 use App\ReadModel\Work\Members\Member\Filter\Filter;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception;
@@ -71,6 +72,26 @@ class MemberFetcher
         $qb->orderBy('"' . $sort . '"', $direction === 'desc' ? 'desc' : 'asc');
 
         return $this->paginator->paginate($qb, $page, $size);
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function activeGroupedList(): array
+    {
+        $stmt = $this->connection->createQueryBuilder()
+            ->select([
+                'm.id',
+                'CONCAT(m.name_first, \' \', m.name_last) AS name',
+                'g.name AS group'
+            ])
+            ->from('work_members_members', 'm')
+            ->leftJoin('m', 'work_members_groups', 'g', 'g.id = m.group_id')
+            ->andWhere('m.status = :status')
+            ->setParameter('status', Status::ACTIVE)
+            ->orderBy('g.name')->addOrderBy('name')
+            ->executeQuery();
+        return $stmt->fetchAllAssociative();
     }
 
     /**

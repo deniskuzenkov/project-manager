@@ -17,12 +17,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProjectController extends AbstractController
 {
     private ProjectRepository $projects;
+
     public function __construct(ProjectRepository $projects)
     {
         $this->projects = $projects;
     }
 
-    #[Route("/{id}", name: ".show")]
+    #[Route("/{id}", name: ".show", requirements: ["id" => Guid::PATTERN])]
     public function show(string $id): Response
     {
         $project = $this->projects->get(new Id($id));
