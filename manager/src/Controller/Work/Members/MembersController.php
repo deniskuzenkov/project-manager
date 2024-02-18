@@ -12,6 +12,7 @@ use App\Model\Work\UseCase\Members\Member\Reinstate\Command;
 use App\Model\Work\UseCase\Members\Member\Reinstate\Handler;
 use App\ReadModel\Work\Members\Member\Filter;
 use App\ReadModel\Work\Members\Member\MemberFetcher;
+use App\ReadModel\Work\Projects\Project\DepartmentFetcher;
 use Doctrine\DBAL\Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -176,8 +177,9 @@ class MembersController extends AbstractController
     }
 
     #[Route('/{id}', name: '.show', requirements: ['id'=> Guid::PATTERN])]
-    public function show(Member $member): Response
+    public function show(Member $member, DepartmentFetcher $fetcher): Response
     {
-        return $this->render('app/work/members/show.html.twig', compact('member'));
+        $departments = $fetcher->allOfMember($member->getId()->getValue());
+        return $this->render('app/work/members/show.html.twig', compact('member', 'departments'));
     }
 }

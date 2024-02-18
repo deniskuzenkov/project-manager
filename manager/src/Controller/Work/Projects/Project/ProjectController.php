@@ -8,6 +8,7 @@ use App\Annotation\Guid;
 use App\Model\Work\Entity\Projects\Id;
 use App\Model\Work\Entity\Projects\Project\Project;
 use App\Model\Work\Entity\Projects\Project\ProjectRepository;
+use App\Security\Voter\Work\ProjectAccess;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,6 +28,7 @@ class ProjectController extends AbstractController
     public function show(string $id): Response
     {
         $project = $this->projects->get(new Id($id));
+        $this->denyAccessUnlessGranted(ProjectAccess::MANAGE_MEMBERS, $project);
         return $this->render('app/work/projects/project/show.html.twig', compact('project'));
     }
 }

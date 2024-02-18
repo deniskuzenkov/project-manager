@@ -13,6 +13,8 @@ use App\Model\Work\UseCase\Projects\Project\Department\Remove\Command as RemoveC
 use App\Model\Work\UseCase\Projects\Project\Department\Create\Handler as CreateHandler;
 use App\Model\Work\UseCase\Projects\Project\Department\Edit\Handler as EditHandler;
 use App\Model\Work\UseCase\Projects\Project\Department\Remove\Handler as RemoveHandler;
+use App\ReadModel\Work\Projects\Project\DepartmentFetcher;
+use App\Security\Voter\Work\ProjectAccess;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,7 +23,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route("work/projects/{project_id}/settings/departments", name: "work.projects.project.settings.departments")]
-#[IsGranted("ROLE_WORK_MANAGE_PROJECTS")]
 class DepartmentController extends AbstractController
 {
     private LoggerInterface $logger;
@@ -34,12 +35,13 @@ class DepartmentController extends AbstractController
     }
 
     #[Route("", name: "")]
-    public function index(string $project_id): Response
+    public function index(string $project_id, DepartmentFetcher $departments): Response
     {
         $project = $this->projects->get(new Id($project_id));
+        $this->denyAccessUnlessGranted(ProjectAccess::MANAGE_MEMBERS, $project);
         return $this->render('app/work/projects/project/settings/departments/index.html.twig', [
             'project' => $project,
-            'departments' => $project->getDepartments()
+            'departments' => $departments->allOfProjects($project->getId()->getValue())
         ]);
     }
 
@@ -47,6 +49,7 @@ class DepartmentController extends AbstractController
     public function create(string $project_id, Request $request, CreateHandler $handler): Response
     {
         $project = $this->projects->get(new Id($project_id));
+        $this->denyAccessUnlessGranted(ProjectAccess::MANAGE_MEMBERS, $project);
         $command = new CreateCommand($project->getId()->getValue());
 
         $form = $this->createForm(CreateForm::class, $command);
@@ -72,6 +75,7 @@ class DepartmentController extends AbstractController
     public function edit(string $project_id, string $id, Request $request, EditHandler $handler): Response
     {
         $project = $this->projects->get(new Id($project_id));
+        $this->denyAccessUnlessGranted(ProjectAccess::MANAGE_MEMBERS, $project);
         $department = $project->getDepartment(new Id($id));
 
         $command = EditCommand::fromDepartment($project, $department);
@@ -108,7 +112,7 @@ class DepartmentController extends AbstractController
     public function delete(string $project_id, string $id, Request $request, RemoveHandler $handler): Response
     {
         $project = $this->projects->get(new Id($project_id));
-
+        $this->denyAccessUnlessGranted(ProjectAccess::MANAGE_MEMBERS, $project);
         if (!$this->isCsrfTokenValid('delete', $request->request->get('token'))) {
             return $this->redirectToRoute('work.projects.project.settings.departments', ['project_id' => $project->getId()]);
         }

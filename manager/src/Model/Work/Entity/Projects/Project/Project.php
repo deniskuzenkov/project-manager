@@ -221,4 +221,35 @@ class Project
     {
         return $this->departments->toArray();
     }
+
+    public function getMembership(MemberId $id): Membership
+    {
+        foreach ($this->memberships as $membership) {
+            if ($membership->isForMember($id)) {
+                return $membership;
+            }
+        }
+        throw new \DomainException('Member is not found.');
+    }
+
+    public function hasMember(MemberId $id): bool
+    {
+        foreach ($this->memberships as $membership) {
+            if ($membership->isForMember($id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function isMemberGranted(MemberId $id, string $permission): bool
+    {
+        foreach ($this->memberships as $membership) {
+            if ($membership->isForMember($id)) {
+                return $membership->isGranted($permission);
+            }
+        }
+        return false;
+    }
+
 }
